@@ -1,6 +1,0 @@
-controller:
-  nginxplus: true
-  image:
-    repository: nginx-plus-ingress
-    tag: "edge"
-    pullPolicy: IfNotPresent

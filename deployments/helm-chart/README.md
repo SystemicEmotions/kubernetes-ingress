@@ -11,7 +11,8 @@ This chart deploys the NGINX Ingress controller in your Kubernetes cluster.
   - Git.
   - If you’d like to use NGINX Plus:
     - Build an Ingress controller image with NGINX Plus and push it to your private registry by following the instructions from [here](../../build/README.md).
-    - Update the `controller.image.repository` field of the `values-plus.yaml` accordingly.
+    - Update the `controller.image.repository` field of the `values.yaml` accordingly.
+    - Set `controller.nginxplus` to true in `values.yaml`.
 
 ## Installing the Chart
 
@@ -24,15 +25,8 @@ This chart deploys the NGINX Ingress controller in your Kubernetes cluster.
     $ cd kubernetes-ingress/deployments/helm-chart
     ```
 3. To install the chart with the release name my-release (my-release is the name that you choose):
-
-    For NGINX:
     ```
     $ helm install --name my-release .
-    ```
-
-    For NGINX Plus:
-    ```
-    $ helm install --name my-release -f values-plus.yaml .
     ```
 
     The command deploys the Ingress controller in your Kubernetes cluster in the default configuration. The configuration section lists the parameters that can be configured during installation.
